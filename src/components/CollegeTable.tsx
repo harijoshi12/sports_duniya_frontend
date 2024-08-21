@@ -83,18 +83,24 @@ const CollegeTable: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
       <SearchBar onSearch={handleSearch} />
-      <table className="w-full border-collapse">
-        <SortControls
-          onSort={handleSort}
-          sortKey={sortKey}
-          sortOrder={sortOrder}
-        />
-        <tbody>
-          {colleges.map((college) => (
-            <CollegeTableRow key={college.id} college={college} />
-          ))}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto shadow-md sm:rounded-lg">
+        <table className="w-full text-sm text-left text-gray-500">
+          <SortControls
+            onSort={handleSort}
+            sortKey={sortKey}
+            sortOrder={sortOrder}
+          />
+          <tbody>
+            {colleges.map((college, index) => (
+              <CollegeTableRow
+                key={college.id}
+                college={college}
+                isEven={index % 2 === 0}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
       {loading && <p className="text-center mt-4">Loading...</p>}
     </div>
   );

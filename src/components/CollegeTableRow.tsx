@@ -9,11 +9,17 @@ import RankingCell from "./cells/RankingCell";
 
 interface Props {
   college: College;
+  isEven: boolean;
 }
 
-const CollegeTableRow: React.FC<Props> = ({ college }) => {
+const CollegeTableRow: React.FC<Props> = ({ college, isEven }) => {
+  const rowClass = college.featured
+    ? "bg-yellow-50 border-b hover:bg-yellow-100"
+    : isEven
+    ? "bg-white border-b hover:bg-gray-50"
+    : "bg-gray-50 border-b hover:bg-gray-100";
   return (
-    <tr>
+    <tr className={rowClass}>
       <CDRankCell rank={college.cdRank} />
       <CollegeCell college={college} />
       <CourseFeeCell fee={college.courseFee} />

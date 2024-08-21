@@ -16,20 +16,28 @@ const SortControls: React.FC<Props> = ({ onSort, sortKey, sortOrder }) => {
   };
 
   return (
-    <thead>
+    <thead className="text-xs text-gray-700 uppercase bg-blue-100">
       <tr>
-        <th onClick={() => onSort("cdRank")} className="cursor-pointer">
+        <th
+          onClick={() => onSort("cdRank")}
+          className="px-6 py-3 cursor-pointer">
           CD Rank {renderSortIcon("cdRank")}
         </th>
         <th>Colleges</th>
-        <th onClick={() => onSort("courseFee")} className="cursor-pointer">
+        <th
+          onClick={() => onSort("courseFee")}
+          className="px-6 py-3 cursor-pointer">
           Course Fees {renderSortIcon("courseFee")}
         </th>
         <th>Placement</th>
-        <th onClick={() => onSort("userRating")} className="cursor-pointer">
+        <th
+          onClick={() => onSort("userRating")}
+          className="px-6 py-3 cursor-pointer">
           User Reviews {renderSortIcon("userRating")}
         </th>
-        <th onClick={() => onSort("nirfRanking")} className="cursor-pointer">
+        <th
+          onClick={() => onSort("nirfRanking")}
+          className="px-6 py-3 cursor-pointer">
           Ranking {renderSortIcon("nirfRanking")}
         </th>
       </tr>
