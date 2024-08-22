@@ -20,7 +20,7 @@ const CollegeTableRow = forwardRef<HTMLTableRowElement, Props>(
       ? "bg-white border-b hover:bg-gray-50"
       : "bg-gray-50 border-b hover:bg-gray-100";
     return (
-      <tr className={`${rowClass}`} ref={ref}>
+      <tr className={`${rowClass} `} ref={ref}>
         <CDRankCell rank={college.cdRank} />
         <CollegeCell college={college} />
         <CourseFeeCell fee={college.courseFee} />

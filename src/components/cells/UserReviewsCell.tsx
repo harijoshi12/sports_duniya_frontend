@@ -7,7 +7,7 @@ interface Props {
 
 const UserReviewsCell: React.FC<Props> = ({ rating, totalReviews }) => {
   return (
-    <td className="border px-4 py-2">
+    <td className="border px-4 py-4 align-top">
       <div className="flex items-center">
         <svg
           className="w-5 h-5 text-amber-500 mr-1"

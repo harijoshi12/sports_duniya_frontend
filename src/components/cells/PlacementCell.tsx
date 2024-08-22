@@ -7,7 +7,7 @@ interface Props {
 
 const PlacementCell: React.FC<Props> = ({ averagePackage, highestPackage }) => {
   return (
-    <td className="border px-4 py-2">
+    <td className="border px-4 py-4 align-top">
       <p className="text-green-500 font-bold">
         ₹ {averagePackage.toLocaleString()}
       </p>
