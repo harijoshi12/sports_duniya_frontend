@@ -21,7 +21,7 @@ export const mockColleges: College[] = [
       { name: "India Today", rank: 1, year: 2023 },
       { name: "THE", rank: 3, year: 2023 },
     ],
-    featured: true
+    featured: false
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const mockColleges: College[] = [
       { name: "India Today", rank: 2, year: 2023 },
       { name: "THE", rank: 4, year: 2023 },
     ],
-    featured: true
+    featured: false
   },
   {
     id: 3,

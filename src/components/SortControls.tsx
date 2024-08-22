@@ -16,7 +16,7 @@ const SortControls: React.FC<Props> = ({ onSort, sortKey, sortOrder }) => {
   };
 
   return (
-    <thead className="text-xs text-gray-700 uppercase bg-blue-100">
+    <thead className="text-xs text-white uppercase bg-emerald-500">
       <tr>
         <th
           onClick={() => onSort("cdRank")}

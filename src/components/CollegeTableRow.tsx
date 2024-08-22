@@ -15,12 +15,12 @@ interface Props {
 const CollegeTableRow = forwardRef<HTMLTableRowElement, Props>(
   ({ college, isEven }, ref) => {
     const rowClass = college.featured
-      ? "bg-yellow-50 border-b hover:bg-yellow-100"
+      ? "bg-orange-100 border-b hover:bg-orange-200"
       : isEven
       ? "bg-white border-b hover:bg-gray-50"
       : "bg-gray-50 border-b hover:bg-gray-100";
     return (
-      <tr className={rowClass} ref={ref}>
+      <tr className={`${rowClass}`} ref={ref}>
         <CDRankCell rank={college.cdRank} />
         <CollegeCell college={college} />
         <CourseFeeCell fee={college.courseFee} />
